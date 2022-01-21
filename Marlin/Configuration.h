@@ -84,8 +84,8 @@
 
   // SCARA tower offset (position of Tower relative to bed zero position)
   // This needs to be reasonably accurate as it defines the printbed position in the SCARA space.
-  #define SCARA_OFFSET_X    0       // (mm)
-  #define SCARA_OFFSET_Y    0       // (mm)
+  #define SCARA_OFFSET_X    100       // (mm)
+  #define SCARA_OFFSET_Y    190       // (mm)
 
   #if ENABLED(MORGAN_SCARA)
 
@@ -978,7 +978,7 @@
  * Override with M92
  *                                      X, Y, Z [, I [, J [, K]]], E0 [, E1[, E2...]]
  */
-#define DEFAULT_AXIS_STEPS_PER_UNIT   { 28.6738351, 28.6738351, 1600, 93 }
+#define DEFAULT_AXIS_STEPS_PER_UNIT   { 133.333, 86.0363469059, 1600, 93 }
 
 /**
  * Default Max Feed Rate (mm/s)
@@ -1794,8 +1794,8 @@
 
 // Manually set the home position. Leave these undefined for automatic settings.
 // For DELTA this is the top-center of the Cartesian print volume.
-#define MANUAL_X_HOME_POS 0
-#define MANUAL_Y_HOME_POS 199.07
+#define MANUAL_X_HOME_POS 20.558
+#define MANUAL_Y_HOME_POS 105.685
 //#define MANUAL_Z_HOME_POS 0
 //#define MANUAL_I_HOME_POS 0
 //#define MANUAL_J_HOME_POS 0
@@ -1819,7 +1819,7 @@
 #define HOMING_FEEDRATE_MM_M { (20*60), (20*60), (4*60) }
 
 // Validate that endstops are triggered on homing moves
-#define VALIDATE_HOMING_ENDSTOPS
+// #define VALIDATE_HOMING_ENDSTOPS
 
 // @section calibrate
 

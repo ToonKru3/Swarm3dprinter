@@ -72,7 +72,7 @@ float segments_per_second = TERN(AXEL_TPARA, TPARA_SEGMENTS_PER_SECOND, SCARA_SE
 
 #endif
 
-#if ENABLED(MORGAN_SCARA)
+#if ENABLED(MP_SCARA)
 
   void scara_set_axis_is_at_home(const AxisEnum axis) {
     if (axis == Z_AXIS)
